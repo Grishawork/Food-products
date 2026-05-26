@@ -151,8 +151,37 @@ footer{
 				}
 			}
 		}
-		.form{
+		.form-div{
 			width: 240px;
+			.form{
+				margin-bottom: 26px;
+				h3{
+					font-family: var(--font-family);
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 150%;
+					color: var(--green-color);
+				}
+			}
+			.payment{
+				h3{
+					font-family: var(--font-family);
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 150%;
+					color: var(--color-black);
+				}
+				.cards{
+					margin-top: 7px;
+					display: flex;
+					img{
+						margin-right: 9px;
+					}
+					img:last-child{
+						margin-right: 0;
+					}
+				}
+			}
 		}
 	}
 	.footer-bottom{

@@ -8,3 +8,69 @@
 
 /* Blocks */
 @import "./blocks/*.scss";
+
+.baner{
+    transform: translateY(-80px);
+    background-image: url('../img/baner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 156px 0 286px 0;
+    z-index: -1;
+    position: relative;
+    margin-bottom: 190px;
+    .food{
+        position: absolute;
+    }
+    .food:first-child{
+        left: 0;
+        top: 0;
+    }
+    .food:nth-child(2){
+        left: 184px;
+        top: 58px;
+        transform: rotate(-13deg);
+    }
+    .food:nth-child(3){
+        right: 0;
+        top: 0;
+    }
+    .food:nth-child(4){
+        left: 242px;
+        bottom: -130px;
+    }
+    .food:nth-child(5){
+        right: 176px;
+        bottom: -105px;
+        transform: rotate(-6deg);
+    }
+    .baner-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            height: 145px;
+            width: 370px;
+        }
+        h1{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 150%;
+            color: var(--green-color);
+            margin: 35px 0 29px 0;
+        }
+        button{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            color: var(--white-text);
+            padding: 12px 66px;
+            background-color: var(--green-color);
+            border-radius: 5px;
+        }
+    }
+}

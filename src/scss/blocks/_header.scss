@@ -66,6 +66,7 @@ header{
 				}
 				.vk{
 					margin-right: 17px;
+					display: block;
 				}
 				.price-list{
 					padding: 8px 16px;
@@ -87,8 +88,7 @@ header{
 	}
 	.header-div-bottom{
 		padding: 10px 23px 21px 250px;
-		background: var(--color-black);
-		opacity: 0.8;
+		background: rgba(6, 6, 6, 0.8);
 		.header-bottom{
 			display: flex;
 			justify-content: space-between;
