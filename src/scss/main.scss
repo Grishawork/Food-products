@@ -74,3 +74,167 @@
         }
     }
 }
+.catalog{
+    .catalog-top{
+        position: relative;
+        margin-bottom: 52px;
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr 370px 370px; 
+        gap: 30px 24px; 
+        grid-template-areas: 
+            "a b b"
+            "a c e"
+            "a d e";
+            .catalog-top-1{ 
+                grid-area: a;
+                .title{
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 48px;
+                    line-height: 81%;
+                    color: var(--color-black);
+                }
+                .catalog-top-info{
+                    margin-top: 37px;
+                    margin-left: 100px;
+                    .line{
+                        height: 3px;
+                        width: 200px;
+                        background: var(--green-color);
+                        margin-bottom: 24px;
+                    }
+                    p{
+                        font-family: var(--font-family);
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 150%;
+                        color: var(--green-color);
+                        max-width: 200px;
+                    }
+                }
+            }
+            .catalog-top-2{ 
+                grid-area: b;
+                margin-bottom: 6px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .catalog-top-3{
+                grid-area: c;
+            }
+            .catalog-top-4{
+                grid-area: d;
+            }
+            .catalog-top-5{
+                grid-area: e;
+            }
+            .catalog-top-3, .catalog-top-4, .catalog-top-5, .catalog-top-2-1, .catalog-top-2-2{
+                position: relative;
+                .rectangle{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    padding: 24px 0;
+                    padding-left: 24px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    background: linear-gradient(180deg, rgba(6, 6, 6, 0) 0%, #060606 100%);
+                    h3{
+                        font-family: var(--font-family);
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: var(--white-text);
+                    }
+                }
+            }
+        .catalog-top-img{
+            position: absolute;
+            bottom: 0;
+            left: -167px;
+        }
+    }
+    .catalog-bottom{
+        position: relative;
+        display: grid;
+        grid-template-columns: 370px 370px 374px;
+        gap: 31px 24px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "a b g"
+          "a c g"
+          "d e f";
+    }
+
+    .catalog-bottom-1 {
+        grid-area: a;
+        margin-bottom: 15px;
+    }
+
+    .catalog-bottom-2 {
+        grid-area: b;
+    }
+
+    .catalog-bottom-3 {
+        grid-area: c;
+        margin-bottom: 15px;
+    }
+
+    .catalog-bottom-4 {
+        grid-area: d;
+    }
+
+    .catalog-bottom-5 {
+        grid-area: e;
+    }
+
+    .catalog-bottom-6 {
+        grid-area: f;
+    }
+
+    .catalog-bottom-7 {
+        grid-area: g;
+        .catalog-bottom-info{
+            .line{
+                height: 3px;
+                width: 200px;
+                background: var(--green-color);
+                margin-bottom: 24px;
+            }
+            p{
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 150%;
+                color: var(--green-color);
+                max-width: 240px;
+            }
+        }
+    }
+    .catalog-bottom-1, .catalog-bottom-2, .catalog-bottom-3, .catalog-bottom-4, .catalog-bottom-5{
+        position: relative;
+        .rectangle{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 24px 0;
+            padding-left: 24px;
+            width: 100%;
+            box-sizing: border-box;
+            background: linear-gradient(180deg, rgba(6, 6, 6, 0) 0%, #060606 100%);
+            h3{
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 150%;
+                color: var(--white-text);
+            }
+        }
+    }
+    .catalog-bottom-img{
+        position: absolute;
+        right: -200px;
+        top: -42px;
+    }
+}
