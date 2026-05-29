@@ -10,7 +10,7 @@
 @import "./blocks/*.scss";
 
 .baner{
-    transform: translateY(-80px);
+    margin-top: -80px;
     background-image: url('../img/baner.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -50,6 +50,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        z-index: 1;
         img{
             height: 145px;
             width: 370px;
@@ -75,6 +76,7 @@
     }
 }
 .catalog{
+    margin-bottom: 60px;
     .catalog-top{
         position: relative;
         margin-bottom: 52px;
@@ -131,6 +133,7 @@
             }
             .catalog-top-3, .catalog-top-4, .catalog-top-5, .catalog-top-2-1, .catalog-top-2-2{
                 position: relative;
+                cursor: pointer;
                 .rectangle{
                     position: absolute;
                     left: 0;
@@ -191,6 +194,7 @@
 
     .catalog-bottom-6 {
         grid-area: f;
+        cursor: pointer;
     }
 
     .catalog-bottom-7 {
@@ -214,6 +218,7 @@
     }
     .catalog-bottom-1, .catalog-bottom-2, .catalog-bottom-3, .catalog-bottom-4, .catalog-bottom-5{
         position: relative;
+        cursor: pointer;
         .rectangle{
             position: absolute;
             left: 0;
@@ -236,5 +241,171 @@
         position: absolute;
         right: -200px;
         top: -42px;
+    }
+}
+.dignities{
+    margin-bottom: 105px;
+    .container{
+        display: flex;
+        justify-content: right;
+        position: relative;
+        .knife{
+            position: absolute;
+            left: -200px;
+            top: -46px;
+            z-index: 2;
+        }
+        .dignities-main{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 770px;
+            .dignities-item{
+                width: 370px;
+                margin-bottom: 56px;
+                h3{
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 150%;
+                    color: var(--green-color);
+                    max-width: 370px;
+                }
+                p{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: #969696;
+                    max-width: 370px;
+                    margin-top: 15px;
+                }
+            }
+            .dignities-item:nth-child(4){
+                margin-bottom: 77px;
+            }
+            .dignities-item:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.program{
+    padding-bottom: 60px;
+    .container{
+        display: flex;
+        justify-content: center;
+        .program-main{
+            position: relative;
+            width: 1030px;
+            box-sizing: border-box;
+            padding: 60px 0 63px 60px;
+            border: 3px solid var(--color-black);
+            img{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+            .program-info{
+                h2{
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 130%;
+                    color: var(--color-black);
+                }
+                p{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 150%;
+                    color: var(--color-black);
+                    margin-top: 15px;
+                    margin-bottom: 47px;
+                    max-width: 543px;
+                    span{
+                        font-weight: 700;
+                    }
+                }
+                button{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: var(--white-text);
+                    padding: 12px 78px 12px 36px;
+                    border-radius: 5px;
+                    background: var(--green-color);
+                    position: relative;
+                }
+                button::after{
+                    content: '';
+                    position: absolute;
+                    background-image: url('../img/arrow.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 18px;
+                    height: 18px;
+                    top: 50%;
+                    right: 36px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+.business{
+    position: relative;
+    overflow: hidden;
+    background: var(--color-black);
+    img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        // z-index: -1;
+    }
+    .container{
+        padding-top: 58px;
+        padding-bottom: 55px;
+        form{
+            .checkbox{
+                padding: 16px 16px 0 16px;
+                box-shadow: 0 4px 61px 0 rgba(0, 0, 0, 0.25);
+                background: var(--white-text);
+                .checkbox-main{
+                    h2{
+                        text-align: center;
+                        font-family: var(--font-family);
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 150%;
+                        text-align: center;
+                        color: var(--green-color);
+                        max-width: 420px;
+                        padding: 22px 18px 25px 23px;
+                        span{
+                            color: var(--color-black);
+                        }
+                    }
+                    .niche{
+                        margin-top: 19px;
+                        margin-bottom: 32px;
+                        h3{
+                            font-family: var(--font-family);
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 150%;
+                            color: var(--color-black);
+                        }
+                        .niche-main{
+                            margin-top: 6px;
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
