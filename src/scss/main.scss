@@ -8,7 +8,6 @@
 
 /* Blocks */
 @import "./blocks/*.scss";
-
 .baner{
     margin-top: -80px;
     background-image: url('../img/baner.png');
@@ -76,6 +75,7 @@
     }
 }
 .catalog{
+    overflow: hidden;
     margin-bottom: 60px;
     .catalog-top{
         position: relative;
@@ -341,7 +341,7 @@
                 button::after{
                     content: '';
                     position: absolute;
-                    background-image: url('../img/arrow.png');
+                    background-image: url('../img/arrow.svg');
                     background-repeat: no-repeat;
                     background-size: cover;
                     width: 18px;
@@ -358,7 +358,7 @@
     position: relative;
     overflow: hidden;
     background: var(--color-black);
-    img{
+    .business-img{
         position: absolute;
         top: 0;
         right: 0;
@@ -367,12 +367,18 @@
     .container{
         padding-top: 58px;
         padding-bottom: 55px;
-        form{
+        display: flex;
+        .business-form{
+            z-index: 2;
+            margin-right: 65px;
             .checkbox{
                 padding: 16px 16px 0 16px;
                 box-shadow: 0 4px 61px 0 rgba(0, 0, 0, 0.25);
-                background: var(--white-text);
+                // background: var(--white-text);
+                background: rgb(220, 220, 220);
                 .checkbox-main{
+                    padding: 22px 18px 25px 23px;
+                    background: var(--white-text);
                     h2{
                         text-align: center;
                         font-family: var(--font-family);
@@ -382,30 +388,227 @@
                         text-align: center;
                         color: var(--green-color);
                         max-width: 420px;
-                        padding: 22px 18px 25px 23px;
+                        margin: 0 auto;
                         span{
                             color: var(--color-black);
                         }
                     }
+                    h3{
+                        font-family: var(--font-family);
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 150%;
+                        color: var(--color-black);
+                    }
+                    label{
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 150%;
+                        color: var(--color-black);
+                    }
+                    input[type="radio"]{
+                        position: absolute;
+                        z-index: -1;
+                        opacity: 0;
+                    }
+                    input[type="radio"] + label{
+                        position: relative;
+                        cursor: pointer;
+                    }
+                    input[type="radio"] + label::before{
+                        content: '';
+                        position: absolute;
+                        left: -24px;
+                        top: 0;
+                        width: 14px;
+                        height: 14px;
+                        border: 2px solid var(--text-color-gray);
+                        border-radius: 50%;
+                    }
+                    input[type="radio"]:checked + label::before {
+                        background-color: var(--green-color);
+                        box-shadow: inset 0 0 0 3px #fff;
+                        border: 1px solid var(--color-black);
+                    }
                     .niche{
-                        margin-top: 19px;
-                        margin-bottom: 32px;
-                        h3{
-                            font-family: var(--font-family);
-                            font-weight: 700;
-                            font-size: 18px;
-                            line-height: 150%;
-                            color: var(--color-black);
-                        }
+                        margin-top: 17px;
+                        max-width: 497px;
                         .niche-main{
-                            margin-top: 6px;
                             display: flex;
                             justify-content: space-between;
                             flex-wrap: wrap;
+                            .niche-item{
+                                max-width: 150px;
+                                margin-top: 5px;
+                                margin-bottom: 30px;
+                                padding-left: 24px;
+                            }
+                            .niche-item:nth-child(1){
+                                max-width: 160px;
+                            }
+                        }
+                    }
+                    .way{
+                        max-width: 494px;
+                        .way-main{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            gap: 50px;
+                            padding-left: 24px;
+                            .way-item{
+                                max-width: 150px;
+                                margin-top: 6px;
+                                margin-bottom: 32px;
+                            }
+                            .way-item:nth-child(1){
+                                max-width: 135px;
+                            }
+                            .way-item:nth-child(3){
+                                max-width: 100px;
+                            }
+                        }
+                    }
+                    .volume{
+                        max-width: 494px;
+                        .volume-main{
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            padding-left: 24px;
+                            .volume-item{
+                                margin-top: 6px;
+                            }
                         }
                     }
                 }
             }
+            .data{
+                padding: 17px 27px 16px 28px;
+                background: var(--green-color);
+                display: flex;
+                justify-content: space-between;
+                .form-tel, .reply{
+                    position: relative;
+                    label{
+                        position: absolute;
+                        top: 12px;
+                        left: 16px;
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: var(--text-color-gray);
+                        pointer-events: none;
+                        transition: 180ms ease;
+                    }
+                    input{
+                        background: var(--white-text);
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 133%;
+                        color: var(--color-black);
+                        padding: 19px 16px 11.5px 16px;
+                        border-radius: 5px;
+                        width: 189px;
+                        box-sizing: border-box;
+                        outline: none;
+                    }
+                    input::placeholder{
+                        color: transparent;
+                    }
+                    input:focus + label{
+                        top: 9px;
+                        left: 16px;
+                        font-size: 12px;
+                        line-height: 133%;
+                    }
+                    input:not(:placeholder-shown) + label{
+                        top: 9px;
+                        left: 16px;
+                        font-size: 12px;
+                        line-height: 133%;
+                    }
+                }
+                button{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: var(--white-text);
+                    border-radius: 5px;
+                    background: var(--color-black);
+                    padding: 12px 22.5px;
+                }
+            }
+        }
+        .business-info{
+            z-index: 2;
+            h2{
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 130%;
+                color: var(--white-text);
+            }
+            .business-p{
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+                color: var(--text-color-gray);
+                max-width: 465px;
+                margin-top: 30px;
+                margin-bottom: 61px;
+            }
+            .business-info-icons{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 13px 27px;
+                img{
+                    margin-bottom: 8px;
+                }
+                p{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 150%;
+                    color: var(--white-text);
+                    max-width: 106px;
+                }
+            }
+            
         }
     }
+}
+.swiper-body{
+    padding: 50px 0 60px 0;
+    .swiper-main{
+        position: relative;
+        .swiper-button-next, .swiper-button-prev{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background: var(--green-color);
+            .swiper-navigation-icon{
+                display: none;
+            }
+        }
+        .swiper-button-next{
+            right: 0;
+            transform: translateX(+50%);
+        }
+        .swiper-button-prev{
+            left: 0;
+            transform: translateX(-50%);
+        }
+        .swiper-slide{
+            max-width: 170px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }  
 }

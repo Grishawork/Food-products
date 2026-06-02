@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>ГРОСС ФУД</title>
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body>
@@ -237,63 +238,176 @@
 		<section class="business">
 			<img class="business-img" src="img/cooking.png" alt="cooking">
 			<div class="container">
-				<form action="">
+				<form class="business-form" action="post">
 					<div class="checkbox">
 						<div class="checkbox-main">
 							<h2>Индивидуальное коммерческое предложение <span>для вашего бизнеса</span></h2>
 							<div class="niche">
 								<h3>Ваша ниша</h3>
 								<div class="niche-main">
-									<input type="radio" id="niche-1" name="niche" value="1">
-    								<label for="niche-1">Ресторан/кафе/фастфуд/пиццерия</label>
-									<input type="radio" id="niche-2" name="niche" value="2">
-    								<label for="niche-2">Мясное и пищевое производство</label>
-									<input type="radio" id="niche-3" name="niche" value="3">
-    								<label for="niche-3">Кулинарный или кондитерский цех</label>
-									<input type="radio" id="niche-4" name="niche" value="4">
-    								<label for="niche-4">Гостиница или отель</label>
-									<input type="radio" id="niche-5" name="niche" value="5">
-    								<label for="niche-5">Комбинат питания</label>
-									<input type="radio" id="niche-6" name="niche" value="6">
-    								<label for="niche-6">Кейтеринговая служба/столовая</label>
+									<div class="niche-item">
+										<input type="radio" id="niche-1" name="niche" value="1">
+    									<label for="niche-1">Ресторан/кафе/фастфуд/пиццерия</label>
+									</div>
+									<div class="niche-item">
+										<input type="radio" id="niche-2" name="niche" value="2">
+										<label for="niche-2">Мясное и пищевое производство</label>
+									</div>
+									<div class="niche-item">
+										<input type="radio" id="niche-3" name="niche" value="3">
+    									<label for="niche-3">Кулинарный или кондитерский цех</label>
+									</div>
+									<div class="niche-item">
+										<input type="radio" id="niche-4" name="niche" value="4">
+    									<label for="niche-4">Гостиница или отель</label>
+									</div>
+									<div class="niche-item">
+										<input type="radio" id="niche-5" name="niche" value="5">
+    									<label for="niche-5">Комбинат питания</label></div>
+									<div class="niche-item">
+										<input type="radio" id="niche-6" name="niche" value="6">
+    									<label for="niche-6">Кейтеринговая служба/столовая</label>
+									</div>
 								</div>
 							</div>
 							<div class="way">
 								<h3>Способ получения</h3>
 								<div class="way-main">
-									<input type="radio" id="way-1" name="way" value="1">
-    								<label for="way-1">Доставка по МСК или МО</label>
-									<input type="radio" id="way-2" name="way" value="2">
-    								<label for="way-2">Самовывоз</label>
-									<input type="radio" id="way-3" name="way" value="3">
-    								<label for="way-3">Доставка в регионы</label>
+									<div class="way-item">
+										<input type="radio" id="way-1" name="way" value="1">
+										<label for="way-1">Доставка по МСК или МО</label>
+									</div>
+									<div class="way-item">
+										<input type="radio" id="way-2" name="way" value="2">
+										<label for="way-2">Самовывоз</label>
+									</div>
+									<div class="way-item">
+										<input type="radio" id="way-3" name="way" value="3">
+										<label for="way-3">Доставка в регионы</label>
+									</div>	
 								</div>
 							</div>
 							<div class="volume">
 								<h3>Ваши объемы закупки</h3>
 								<div class="volume-main">
-									<input type="radio" id="volume-1" name="volume" value="1">
-    								<label for="volume-1">200 000 руб.</label>
-									<input type="radio" id="volume-2" name="volume" value="2">
-    								<label for="volume-2">200 000 - 500 000 руб.</label>
-									<input type="radio" id="volume-3" name="volume" value="3">
-    								<label for="volume-3">более 500 000 руб.</label>
+									<div class="volume-item">
+										<input type="radio" id="volume-1" name="volume" value="1">
+										<label for="volume-1">200 000 руб.</label>
+									</div>
+									<div class="volume-item">
+										<input type="radio" id="volume-2" name="volume" value="2">
+										<label for="volume-2">200 000 - 500 000 руб.</label>
+									</div>
+									<div class="volume-item">
+										<input type="radio" id="volume-3" name="volume" value="3">
+										<label for="volume-3">более 500 000 руб.</label>
+									</div>	
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="data">
-						<div id="form-tel">
+						<div class="form-tel">
+							<input type="tel" id="tel" name="tel" placeholder=" " required />
 							<label for="tel">Телефон*</label>
-							<input type="tel" id="tel" name="tel" />
 						</div>
-						<div id="reply">
+						<div class="reply">	
+							<input type="email" id="mail" name="email" placeholder=" " required />
 							<label for="mail">Почта*</label>
-							<input type="email" id="mail" name="email" />
 						</div>
 						<button type="submit">Получить</button>
 					</div>
 				</form>
+				<div class="business-info">
+					<h2>С кем мы работаем</h2>
+					<p class="business-p">Мы делаем больше, чем остальные поставщики продуктов. Привозим оптом качественный продукт по выгодной цене. Проводим по ФГИС «Меркурий», доставляем на следующий день после заказа. Выполняем свои обязательства на 100% - работаем для бизнеса и понимаем, насколько для вас важны сроки и качество. Поставляем от производителей напрямую, поэтому цены приемлемые. Чтобы получить прайс, оставьте заявку на сайте или позвоните.</p>
+					<div class="business-info-icons">
+						<div class="business-info-icons-item">
+							<img src="img/restaurants.svg" alt="restaurants">
+							<p>Рестораны</p>
+						</div>
+						<div class="business-info-icons-item">
+							<img src="img/factories.svg" alt="factories">
+							<p>Комбинаты питания</p>
+						</div>
+						<div class="business-info-icons-item">
+							<img src="img/hotels.svg" alt="hotels">
+							<p>Гостиницы</p>
+						</div>
+						<div class="business-info-icons-item">
+							<img src="img/cafe.svg" alt="cafe">
+							<p>Кафе и бары</p>
+						</div>
+						<div class="business-info-icons-item">
+							<img src="img/food-production.svg" alt="food-production">
+							<p>Пищевые производства</p>
+						</div>
+						<div class="business-info-icons-item">
+							<img src="img/pastry-shops.svg" alt="pastry-shops">
+							<p>Кондитерские цеха</p>
+						</div>
+						<div class="business-info-icons-item">
+							<img src="img/fast-food.svg" alt="fast-food">
+							<p>Фаст-фуд и пиццерии</p>
+						</div>
+						<div class="business-info-icons-item">
+							<img src="img/meat-production.svg" alt="meat-production">
+							<p>Мясные производства</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="swiper-body">
+			<div class="container">
+				<div class="swiper-main">
+					<div class="swiper-button-next">
+						<img src="img/arrow.svg" alt="arrow">
+					</div>
+					<div class="swiper-button-prev">
+						<img src="img/arrow-left.svg" alt="arrow">
+					</div>
+					<div class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/грабли.png" alt="грабли">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/патио.png" alt="патио">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/теремок.png" alt="теремок">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/трапеза.png" alt="трапеза">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/радинан.png" alt="радинан">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/му-му.png" alt="му-му">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/грабли.png" alt="грабли">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/патио.png" alt="патио">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/теремок.png" alt="теремок">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/трапеза.png" alt="трапеза">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/радинан.png" alt="радинан">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/му-му.png" alt="му-му">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<footer>
@@ -383,9 +497,16 @@
 					</div>
 				</div>
 		    </div>
-			<div class="form-div">
-				<div class="form">
+			<div class="footer-form-div">
+				<div class="footer-form">
 					<h3>Хотите быть в курсе акций?</h3>
+					<form class="footer-form-main" action="post">
+						<div class="footer-reply">
+							<input type="email" id="footer-mail" name="footer-email" placeholder=" " required />
+							<label for="footer-mail">Почта*</label>
+						</div>
+						<button type="submit">Подписаться</button>
+					</form>
 				</div>
 				<div class="payment">
 					<h3>Принимаем к оплате</h3>
@@ -406,5 +527,21 @@
 	</div>
 </footer>
 		<script src="./js/index.bundle.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 6,
+			spaceBetween: 30,
+			freeMode: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			});
+		</script>
 	</body>
 </html>

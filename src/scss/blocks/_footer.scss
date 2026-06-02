@@ -151,9 +151,9 @@ footer{
 				}
 			}
 		}
-		.form-div{
+		.footer-form-div{
 			width: 240px;
-			.form{
+			.footer-form{
 				margin-bottom: 26px;
 				h3{
 					font-family: var(--font-family);
@@ -162,6 +162,66 @@ footer{
 					line-height: 150%;
 					color: var(--green-color);
 				}
+				.footer-form-main{
+					display: flex;
+					flex-direction: column;
+					.footer-reply{
+						position: relative;
+						margin-top: 16px;
+						label{
+							position: absolute;
+							top: 12px;
+							left: 16px;
+							font-family: var(--font-family);
+							font-weight: 400;
+							font-size: 16px;
+							line-height: 150%;
+							color: var(--text-color-gray);
+							pointer-events: none;
+							transition: 180ms ease;
+						}
+						input{
+							background: var(--white-text);
+							font-family: var(--font-family);
+							font-weight: 400;
+							font-size: 12px;
+							line-height: 133%;
+							color: var(--color-black);
+							padding: 19px 16px 11.5px 16px;
+							border-radius: 5px;
+							width: 100%;
+							box-sizing: border-box;
+							margin-bottom: 15px;
+							border: 1px solid var(--text-color-gray-white);
+							outline: none;
+						}
+						input::placeholder{
+							color: transparent;
+						}
+						input:focus + label{
+							top: 9px;
+							left: 16px;
+							font-size: 12px;
+							line-height: 133%;
+						}
+						input:not(:placeholder-shown) + label{
+							top: 9px;
+							left: 16px;
+							font-size: 12px;
+							line-height: 133%;
+						}
+					}
+					button{
+						font-family: var(--font-family);
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 150%;
+						color: var(--white-text);
+						border-radius: 5px;
+						background: var(--color-black);
+						padding: 12px 22.5px;
+					}
+				}	
 			}
 			.payment{
 				h3{
